@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LigaDesligaDado</string>
+    <string name="title_activity_tela_inicial">TelaInicialActivity</string>
+    <string name="title_home">Novo Alarme</string>
+    <string name="title_dashboard">Meus Alarmes</string>
+    <string name="title_notifications">Alarmes por SMS</string>
 </resources>
