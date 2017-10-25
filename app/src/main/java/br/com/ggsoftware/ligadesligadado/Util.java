@@ -5,6 +5,7 @@ import android.os.Build;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -24,15 +25,18 @@ public class Util {
         }
     }
 
-    public static String getDataHojeFormatada(Context context){
+    public static String getDataFormatada(Context context, Date date){
         SimpleDateFormat  sdfData = new SimpleDateFormat("dd/MM/yyyy", getCurrentLocale(context));
         Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+
         return sdfData.format(calendar.getTime());
     }
 
-    public static String getHoraHojeFormatada(Context context){
+    public static String getHoraFormatada(Context context, Date date){
          SimpleDateFormat sdfHora = new SimpleDateFormat("HH:mm:ss",  getCurrentLocale(context));
         Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
         return sdfHora.format(calendar.getTime());
     }
 }
